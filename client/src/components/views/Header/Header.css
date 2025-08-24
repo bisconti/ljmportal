@@ -1,0 +1,45 @@
+ul {
+  display: flex;
+  justify-content: end;
+  gap: 50px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+ul > li {
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px 5px;
+  caret-color: transparent;
+  position: relative;
+}
+
+/* Header 우측 메뉴 animation 효과 설정 */
+li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Header 우측 메뉴 animation 효과 길이 설정 */
+li:hover::after {
+  width: 100%;
+}
+
+.container {
+  background-color: #002c5f;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoBox {
+  cursor: pointer;
+}
